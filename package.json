@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "npx eslint ./src/**/*.ts --fix",
+    "format": "prettier src --write --ignore-unknown",
+    "check-types": "tsc --noEmit --pretty --strict --skipLibCheck",
+    "prepare": "husky"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
